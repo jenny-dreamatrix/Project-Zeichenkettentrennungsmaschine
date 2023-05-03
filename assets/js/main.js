@@ -21,7 +21,7 @@ const trennung = () => {
 
     // falls das eingegebene Wort im Feld trennungsposition nicht in der zeichenkette enthalten ist, soll die Funktion gestoppt werden und ein Hinweis im HTML ausgegeben werden.
     if(zeichenkette.includes(trennungsposition) == false){
-        outputVorn.innerHTML = "Das Wort muss in dem Satz vorhanden sein. Versuche es noch einmal."
+        outputVorn.innerHTML = "Das Wort muss in dem Satz vorhanden sein. Versuche es noch einmal. <p>Beachte Groß- und Kleinschreibung.</p>"
         outputHinten.innerHTML = " ";
         return;
     }
