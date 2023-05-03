@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeichenkettentrennungsmaschine</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Zeichenketten-</h1>
+      <h1>trennungs-</h1>
+      <h1>maschine</h1>
+
+      <form onsubmit="trennung(); return false">
+        <label for="zeichenkette">Zu trennende Zeichenkette:</label>
+        <input
+          type="text"
+          id="zeichenkette"
+          placeholder="Ich bin ein schöner, langer Satz."
+          required
+        />
+
+        <label for="trennungsposition"
+          >Zeichenkette für die Trennungsposition:</label
+        >
+        <input type="text" id="trennungsposition" required />
+
+        <div>
+          <figure>
+            <input type="radio" id="davor" name="trennungs-option" required />
+            <label for="davor">davor trennen</label>
+          </figure>
+          <figure>
+            <input type="radio" id="danach" name="trennungs-option" required />
+            <label for="danach">danach trennen</label>
+          </figure>
+        </div>
+
+        <input type="submit" value="Let's go!" />
+      </form>
+
+      <section>
+        <article>
+          <figure>
+            <h2>Vorderer Teil</h2>
+            <p class="output-vorn"></p>
+          </figure>
+          <figure>
+            <h2>Hinterer Teil</h2>
+            <p class="output-hinten"></p>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>
