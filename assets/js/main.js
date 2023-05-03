@@ -19,20 +19,28 @@ const trennung = () => {
     let index = zeichenkette.indexOf(trennungsposition);
     console.log({index});
 
+    // falls das eingegebene Wort im Feld trennungsposition nicht in der zeichenkette enthalten ist, soll die Funktion gestoppt werden und ein Hinweis im HTML ausgegeben werden.
+    if(zeichenkette.includes(trennungsposition) == false){
+        outputVorn.innerHTML = "Das Wort muss in dem Satz vorhanden sein. Versuche es noch einmal."
+        outputHinten.innerHTML = " ";
+        return;
+    }
+
+    // falls das Wort enthalten ist, wird fortgefahren.
+
     // vorderen Teil abschneiden
     let satzVorn = zeichenkette.slice(0, index);
     // hinteren Teil abschneiden
     let satzHinten = zeichenkette.slice(index);
     console.log({satzVorn}, {satzHinten});
 
-
     // da die radio input Felder required sind, MUSS immer eins von beiden ausgewählt werden. Außerdem kann nur maximal eins von beiden ausgewählt werden. Das heißt, wenn davor == true ist, ist automatisch danach == false. Und wenn davor == false ist, ist automatisch danach == true. Daher reicht es, wenn ich nur zwei conditions anspreche:
     // wenn davor == true ist..
     if (davor == true){
         // davor trennen
         // im HTML ausgeben
-       outputVorn.innerHTML = satzVorn;
-       outputHinten.innerHTML = satzHinten;
+        outputVorn.innerHTML = satzVorn;
+        outputHinten.innerHTML = satzHinten;
     } else {
         // danach trennen (weil davor == false)
         // vorderer teil: es muss erst noch das Wort, das im input Feld trennungsposition eingegeben wurde, hinzugefügt werden
@@ -46,5 +54,4 @@ const trennung = () => {
         outputVorn.innerHTML = satzVornDanach;
         outputHinten.innerHTML = satzHintenDanach;
     }
-
 }
