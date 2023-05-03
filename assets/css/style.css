@@ -50,10 +50,14 @@ h2 {
 }
 
 p,
-label,
-input {
+label {
   font-size: 2rem;
   color: var(--text-color);
+}
+
+input {
+  font-size: 2rem;
+  color: grey;
 }
 
 /* main styles */
