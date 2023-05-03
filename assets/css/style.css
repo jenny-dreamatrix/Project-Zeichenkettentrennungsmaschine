@@ -127,11 +127,14 @@ input[type="radio"] {
 input[type="submit"] {
   height: 6rem;
   color: rgb(81, 81, 81);
+  transition: 1s;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--text-color);
+  background-color: var(--head-color);
   color: black;
+  font-size: 2.3rem;
+  transform: scale(1.05);
 }
 
 /* animation for main background linear gradient */
